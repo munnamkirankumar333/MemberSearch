@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('activefit_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      z-index: -1;
+    }
+
+    .top-left-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 80px;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    .layout-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 80px 30px 0;
+      box-sizing: border-box;
+    }
+
+    .intro-paragraph {
+      flex: 1;
+	  margin-top: -90px;
+      max-width: 480px;
+      font-size: 1.05em;
+      color: white;
+	  font-weight: bold;
+      line-height: 1.6;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    main {
+      flex-shrink: 0;
+      width: 420px;
+      min-height: 360px;
+      background-color: #fff;
+      padding: 1.5em;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .fbhp-logo {
+      display: block;
+      margin: 0 auto 1em;
+      height: 80px;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    h1 {
+      color: #003366;
+      margin-top: 0;
+      font-size: 1.4em;
+    }
+
+    .link-box {
+      border: 1px solid #ccc;
+      padding: 0.8em;
+      border-radius: 4px;
+      margin-top: 0.8em;
+    }
+
+    .link-box a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077cc;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    .link-box a:hover {
+      color: #005999;
+      text-decoration: underline;
+    }
+
+    .cancel-button {
+      margin-top: 1em;
+      background-color: #cccccc;
+      color: #333;
+      border: none;
+      padding: 0.6em 1.2em;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .bottom-left-logo {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      height: 65px;
+    }
+
+    .footer-note {
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      font-size: 0.7em;
+      color: #666;
+    }
+
+    @media (max-width: 950px) {
+      .intro-paragraph {
+        display: none !important;
+      }
+
+      .layout-wrapper {
+        justify-content: center;
+        padding-top: 100px;
+      }
+
+      main {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .bottom-left-logo {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout-wrapper">
+    <div class="intro-paragraph">
+    <p>
+        Congratulations on taking the next step towards a healthier you!<br><br>
+        FBHP Members eighteen (18) years of age and older may choose to participate in the Active&Fit Direct™ comprehensive fitness membership program. Active&Fit Direct is a product provided by American Specialty Health Fitness, Inc. An enrollment fee, monthly fee and applicable taxes gives members access to the Active&Fit Direct network of fitness centers nationwide, and on-demand workout videos to stay active at home or on-the-go.<br><br>
+        To sign up for Active&Fit Direct, please confirm your FBHP Member Eligibility.
+      </p>
+					 
+    </div>
+
+    <main role="main" aria-labelledby="registration-heading">
+      <img src="header_active-fit.png" alt="FBHP Program Logo" class="fbhp-logo" />
+      <h1 id="registration-heading">New Registration</h1>
+      <p>Select the registration that correctly identifies you:</p>
+      <div class="link-box">
+        <a href="https://ramkumar-7.github.io/MemberSearchReg2/">Member</a>
+      </div>
+      <button class="cancel-button" onclick="handleCancel()" aria-label="Cancel registration and exit">Cancel</button>
+    </main>
+  </div>
+
+  <img src="Activeandfit_4.png" alt="Active&Fit Logo" class="bottom-left-logo" />
+
+  <footer class="footer-note">
+    © 2015–2017 Cognizant TriZetto Software Group, Inc. All rights reserved. Confidential and Trade Secret Material.
+  </footer>
+
+  <script>
+    function handleCancel() {
+      if (confirm("Are you sure you want to exit this page?")) {
+        window.location.href = "about:blank";
+      }
+    }
+  </script>
+</body>
+</html>
